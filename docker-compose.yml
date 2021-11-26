@@ -1,0 +1,39 @@
+version: "3"
+
+
+services:
+  web:
+    build: .
+    container_name: api_valter
+    command: npm start
+    volumes:
+      - .:/usr/valter_api
+    ports:
+      - "9000:9000"
+
+
+  db:
+    image: mongo
+    container_name: database_valter
+    restart: always
+    volumes:
+      - "valterdata:/data/valterdb"
+    ports:
+      - "27019:27019"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: valter
+      MONGO_INITDB_ROOT_PASSWORD: valterpwd
+
+  mongo-express:
+    image: mongo-express
+    container_name: database_dashboard_valter
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: valter
+      ME_CONFIG_MONGODB_ADMINPASSWORD: valterpwd
+      ME_CONFIG_MONGODB_SERVER: database_valter
+
+volumes:
+  valterdata:
