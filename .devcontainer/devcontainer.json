@@ -1,0 +1,10 @@
+{
+  "name": "Valter Geladeira",
+  "build": {
+    "dockerfile": "../dockerfile"
+  },
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
+  "service": "valter",
+  "extensions": [],
+
+}
