@@ -19,6 +19,7 @@ services:
     restart: always
     volumes:
       - "valterdata:/data/valterdb"
+      - ./mongo-init/:/docker-entrypoint-initdb.d/:ro
     ports:
       - "27019:27019"
     environment:

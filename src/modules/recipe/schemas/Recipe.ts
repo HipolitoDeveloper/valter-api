@@ -1,5 +1,4 @@
 import {Static, Type} from "@sinclair/typebox";
-import {UserId, UserInterface} from "../../user/schemas/User";
 import {ProductInterface} from "../../product/schemas/Product";
 import {PortionTypeEnum} from "../../common/enums/PortionType";
 import {CategoryInterface} from "../../category/schemas/Category";
@@ -11,7 +10,7 @@ export const RecipeInterface = Type.Object({
     name: Type.String(),
     qt_portion: Type.Integer(),
     duration: Type.Integer(),
-    created_by: UserId,
+    created_by:  Type.String(),
     available: Type.Boolean({default: false}),
     complete_creation: Type.Boolean({default: false}),
     steps: Type.Array(Type.Object({

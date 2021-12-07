@@ -13,7 +13,7 @@ export const UserInterface = Type.Object({
     shoplist_id: Type.Object({}),
     pantry_id: Type.Object({}),
     saved_recipes: Type.Array({...Type.Pick(RecipeInterface, ['id', 'category_id', 'name', 'qt_portion', 'duration'])}),
-    favorite_recipes: Type.Object({...Type.Pick(RecipeInterface, ['id', 'category_id', 'name', 'qt_portion', 'duration'])}),
+    favorite_recipes: Type.Object({...Type.Pick(RecipeInterface, ['id'])}),
     favorite_product: Type.Object({...Type.Pick(ProductInterface, ['id', 'name'])}),
     notification: Type.Array({
         ...Type.Pick(NotificationInterface, ['uid', 'description']),
@@ -27,4 +27,3 @@ export const UserInterface = Type.Object({
 
 export type TUser = Static<typeof UserInterface>;
 
-export const UserId = Type.String();

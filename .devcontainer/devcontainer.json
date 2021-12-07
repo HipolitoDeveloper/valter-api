@@ -4,5 +4,5 @@
   "service": "api_valter",
   "workspaceFolder":"/workspace",
 	"forwardPorts": [9000, 8081],
-  "postCreateCommand": "npm install && npm start",
+  "postCreateCommand": "npm install & npm start",
 }

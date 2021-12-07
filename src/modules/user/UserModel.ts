@@ -9,10 +9,10 @@ const schema = new Schema<TUser>({
     birthday: String,
     shoplist_id: Object,
     pantry_id: Object,
-    saved_recipes: Number,
+    saved_recipes: Array,
     favorite_recipes: Object,
     favorite_product: Object,
-    notification: Object,
+    notification: Array,
     created_at: String,
     updated_at: String
 })

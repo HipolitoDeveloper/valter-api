@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58725d7c-4b23-47d1-8cd4-698ddd740aa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.devcontainer/devcontainer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="58725d7c-4b23-47d1-8cd4-698ddd740aa9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +34,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/shoplist" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\gabri\OneDrive\Escola\Documents\Programacao_Projetos\Projetos Pessoais\Casa_Project\backend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -64,7 +60,7 @@
       <workItem from="1637846312655" duration="16895000" />
       <workItem from="1637927709779" duration="10854000" />
       <workItem from="1638234610155" duration="270000" />
-      <workItem from="1638309804532" duration="631000" />
+      <workItem from="1638309804532" duration="671000" />
     </task>
     <servers />
   </component>
