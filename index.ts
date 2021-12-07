@@ -5,11 +5,11 @@ import swagger from 'fastify-swagger'
 import mongoose from 'mongoose'
 
 import dotenv from 'dotenv'
-import UserRoutes from "./src/modules/user/routes/UserRoutes";
-import swaggerDocumentation from "./src/modules/common/documentation";
+// import UserRoutes from "./src/modules/user/routes/UserRoutes";
+// import swaggerDocumentation from "./src/modules/common/documentation";
 dotenv.config()
 
-export const app = fastify();
+export const app = fastify()
 
 // app.register(fastifyEnv, {
 //     schema: EnvironmentSchema,
@@ -26,14 +26,14 @@ mongoose.connect('mongodb://valter:valterpwd@database_valter/valter_test?retryWr
         console.log("error", error)
     })
 
-app.register(swagger, swaggerDocumentation);
+// app.register(swagger, swaggerDocumentation);
 
 
 app.get('/', function (request, reply) {
     reply.send("Our first route")
 })
 
-app.register(UserRoutes, { prefix: '/user' });
+// app.register(UserRoutes, { prefix: '/user' });
 
 app.listen(9000, '0.0.0.0', function (err, address) {
     if (err) {

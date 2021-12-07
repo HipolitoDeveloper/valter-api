@@ -2,15 +2,16 @@ version: "3"
 
 
 services:
-  web:
+  api_valter:
     build: .
     container_name: api_valter
-    command: npm start
     volumes:
-      - .:/usr/valter_api
+       - ..:/workspace:cached
+
     ports:
       - "9000:9000"
-
+    command: /bin/sh -c "while sleep 1000; do :; done"
+      
 
   db:
     image: mongo

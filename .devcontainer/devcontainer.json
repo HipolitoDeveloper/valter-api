@@ -1,10 +1,8 @@
 {
-  "name": "Valter Geladeira",
-  "build": {
-    "dockerfile": "../dockerfile"
-  },
-  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
-  "service": "valter",
-  "extensions": [],
-
+  "name": "Valter API",
+  "dockerComposeFile":"docker-compose.yml",
+  "service": "api_valter",
+  "workspaceFolder":"/workspace",
+	"forwardPorts": [9000, 8081],
+  "postCreateCommand": "npm install && npm start",
 }
