@@ -5,7 +5,10 @@ const schema = new Schema<TUser>({
     token: String,
     username: String,
     password: String,
-    email: String,
+    email: {
+        type: String,
+        unique: true
+      },
     birthday: String,
     shoplist_id: Object,
     pantry_id: Object,
@@ -16,6 +19,7 @@ const schema = new Schema<TUser>({
     created_at: String,
     updated_at: String
 })
+
 
 
 export const UserModel = model<TUser>('User', schema);
