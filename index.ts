@@ -13,6 +13,8 @@ import PassportHTTPBearer from 'passport-http-bearer';
 import fastifySecureSession from 'fastify-secure-session';
 import AuthService from './src/utils/AuthService'
 
+import fastifyNodemailer from 'fastify-nodemailer-plugin';
+
 dotenv.config()
 
 export const app = fastify()
@@ -23,9 +25,9 @@ export const app = fastify()
 //     if (err) console.error(err);
 // });
 
-const { MONGO_CONNECTION,TOKEN_SECRET } = process.env
+const { MONGO_CONNECTION, TOKEN_SECRET } = process.env
 
-mongoose.connect( MONGO_CONNECTION || "localconnection")
+mongoose.connect(MONGO_CONNECTION || "localconnection")
     .then(result => {
         console.log("MongoDB Conectado")
     })
@@ -33,24 +35,35 @@ mongoose.connect( MONGO_CONNECTION || "localconnection")
         console.log("error", error)
     })
 
-// app.register(swagger, swaggerDocumentation);
+app.register(swagger, swaggerDocumentation);
 
 app.register(fastifySecureSession, {
-	key: TOKEN_SECRET || 'teste',
-	cookie: {
-		path: '/',
-	},
+    key: TOKEN_SECRET || 'teste',
+    cookie: {
+        path: '/',
+    },
 });
+
+app.register(fastifyNodemailer, {
+    host: "smtp.example.com",
+    port: 587,
+    secure: false, 
+    service: "gmail",
+    auth: {
+        user: "hipolitodeveloper@gmail.com",
+        pass: "pop123abd"
+    }
+})
 
 
 app.register(Passport.initialize());
 app.register(Passport.secureSession());
 
 Passport.use(
-	'bearer',
-	new PassportHTTPBearer.Strategy(async (token: any, done: any) =>
-		AuthService.validateBearerToken(token, done)
-	)
+    'bearer',
+    new PassportHTTPBearer.Strategy(async (token: any, done: any) =>
+        AuthService.validateBearerToken(token, done)
+    )
 );
 
 

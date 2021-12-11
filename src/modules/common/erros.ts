@@ -1,5 +1,4 @@
-import { FastifyError, FastifyRequest, FastifyReply } from 'fastify';
-import Constants from './constants';
+import { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
 
 class SystemError extends Error {
 	statusCode: number;
@@ -27,6 +26,14 @@ export class UnauthorizedError extends SystemError {
 
 	constructor(code: number, message: string) {
 		super(UnauthorizedError.statusCode, code, message);
+	}
+}
+
+export class EmailError extends SystemError {
+	static statusCode = 500;
+
+	constructor(code: number, message: string) {
+		super(EmailError.statusCode, code, message);
 	}
 }
 

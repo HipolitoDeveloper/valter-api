@@ -19,15 +19,15 @@ const SignupUserError = Type.Object(
 	{
 		statusCode: Type.Literal(400, { default: 400 }),
 		code: Type.String({
-			default: Constants.SYSTEM_ERRO_DUPLICATEDUSER_CODE,
+			default: Constants.SYSTEM_ERRO_DUPLICATED_USER_CODE,
 			examples: [
-				Constants.SYSTEM_ERRO_DUPLICATEDUSER_CODE,			
+				Constants.SYSTEM_ERRO_DUPLICATED_USER_CODE,			
 			],
 		}),
 		message: Type.String({
-			default: Constants.SYSTEM_ERRO_DUPLICATEDUSER_MESSAGE,
+			default: Constants.SYSTEM_ERRO_DUPLICATED_USER_MESSAGE,
 			examples: [
-				Constants.SYSTEM_ERRO_DUPLICATEDUSER_MESSAGE,			
+				Constants.SYSTEM_ERRO_DUPLICATED_USER_MESSAGE,			
 			],
 		}),
 	},

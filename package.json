@@ -21,6 +21,8 @@
     "express": "^4.17.1",
     "fastify": "^3.24.0",
     "fastify-env": "^2.1.1",
+    "fastify-nodemailer": "^5.0.0",
+    "fastify-nodemailer-plugin": "^1.0.3",
     "fastify-passport": "^0.4.3",
     "fastify-secure-session": "^3.0.0",
     "fastify-swagger": "^4.12.6",

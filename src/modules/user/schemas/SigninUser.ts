@@ -19,17 +19,17 @@ const SigninUserError = Type.Object(
 	{
 		statusCode: Type.Literal(400, { default: 400 }),
 		code: Type.String({
-			default: Constants.SYSTEM_ERRO_USERINVALIDPASSWORD_CODE,
+			default: Constants.SYSTEM_ERRO_USER_INVALIDPASSWORD_CODE,
 			examples: [
-				Constants.SYSTEM_ERRO_USERINVALIDPASSWORD_CODE,	
-                Constants.SYSTEM_ERRO_USERNOTFOUND_CODE		
+				Constants.SYSTEM_ERRO_USER_INVALIDPASSWORD_CODE,	
+                Constants.SYSTEM_ERRO_USER_NOTFOUND_CODE		
 			],
 		}),
 		message: Type.String({
-			default: Constants.SYSTEM_ERRO_USERINVALIDPASSWORD_CODE,
+			default: Constants.SYSTEM_ERRO_USER_INVALIDPASSWORD_MESSAGE,
 			examples: [
-				Constants.SYSTEM_ERRO_USERINVALIDPASSWORD_MESSAGE,		
-                Constants.SYSTEM_ERRO_USERNOTFOUND_MESSAGE	
+				Constants.SYSTEM_ERRO_USER_INVALIDPASSWORD_MESSAGE,		
+                Constants.SYSTEM_ERRO_USER_NOTFOUND_MESSAGE	
 			],
 		}),
 	},
