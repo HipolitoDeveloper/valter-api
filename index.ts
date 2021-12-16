@@ -1,19 +1,19 @@
 
 
-import fastify from 'fastify'
-import swagger from 'fastify-swagger'
-import mongoose from 'mongoose'
-
-import dotenv from 'dotenv'
-import UserRoutes from "./src/modules/user/routes/UserRoutes";
-import swaggerDocumentation from "./src/modules/common/documentation";
-
-import Passport from 'fastify-passport';
-import PassportHTTPBearer from 'passport-http-bearer';
-import fastifySecureSession from 'fastify-secure-session';
-import AuthService from './src/utils/AuthService'
-
+import dotenv from 'dotenv';
+import fastify from 'fastify';
 import fastifyNodemailer from 'fastify-nodemailer-plugin';
+import Passport from 'fastify-passport';
+import fastifySecureSession from 'fastify-secure-session';
+import swagger from 'fastify-swagger';
+import mongoose from 'mongoose';
+import PassportHTTPBearer from 'passport-http-bearer';
+import swaggerDocumentation from "./src/modules/common/documentation";
+import UserRoutes from "./src/modules/user/routes/UserRoutes";
+import AuthService from './src/utils/AuthService';
+
+
+
 
 dotenv.config()
 
